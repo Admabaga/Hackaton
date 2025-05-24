@@ -7,7 +7,7 @@ from app.DBConfig.DbConfig import engine
 
 Base.metadata.create_all(bind = engine)
 app=FastAPI()
-origins = ["*"]
+origins = ["http://localhost:5173"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
